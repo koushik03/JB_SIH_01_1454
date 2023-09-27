@@ -409,7 +409,7 @@ def extract_features(url):
 
                
                # # # content-based features
-                 ctnfe.nb_hyperlinks(domain),
+                 ctnfe.nb_hyperlinks(Href, Link, Media, Form, CSS, Favicon),
                  ctnfe.internal_hyperlinks(Href, Link, Media, Form, CSS, Favicon),
                  ctnfe.external_hyperlinks(Href, Link, Media, Form, CSS, Favicon),
                  ctnfe.null_hyperlinks(hostname, Href, Link, Media, Form, CSS, Favicon),
@@ -526,7 +526,7 @@ def extract_hyperlinks_features(Href, Link, Media, Form, CSS, Favicon):
         row = [
                
                # # # content-based features
-                 ctnfe.nb_hyperlinks(domain),
+                 ctnfe.nb_hyperlinks(Href, Link, Media, Form, CSS, Favicon),
                  ctnfe.internal_hyperlinks(Href, Link, Media, Form, CSS, Favicon),
                  ctnfe.external_hyperlinks(Href, Link, Media, Form, CSS, Favicon),
                  ctnfe.null_hyperlinks(hostname, Href, Link, Media, Form, CSS, Favicon),

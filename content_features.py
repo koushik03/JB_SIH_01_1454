@@ -14,7 +14,7 @@ import re
 #            len(CSS['internals']) + len(CSS['externals']) +\
 #            len(Favicon['internals']) + len(Favicon['externals'])
 
-def nb_hyperlinks(dom):
+def nb_hyperlinks(Href, Link, Media, Form, CSS, Favicon):
     return len(dom.find("href")) + len(dom.find("src"))
 
 #################################################################################################################################
@@ -23,7 +23,7 @@ def nb_hyperlinks(dom):
 
 
 def h_total(Href, Link, Media, Form, CSS, Favicon):
-    return nb_hyperlinks(domain)
+    return nb_hyperlinks(Href, Link, Media, Form, CSS, Favicon)
 
 def h_internal(Href, Link, Media, Form, CSS, Favicon):
     return len(Href['internals']) + len(Link['internals']) + len(Media['internals']) +\
