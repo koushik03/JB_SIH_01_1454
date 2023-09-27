@@ -376,27 +376,6 @@ def extract_features(url):
                urlfe.url_length(url),
                urlfe.url_length(hostname),
                urlfe.having_ip_address(url),
-               urlfe.count_dots(url),
-               urlfe.count_hyphens(url),
-               urlfe.count_at(url),
-               urlfe.count_exclamation(url),
-               urlfe.count_and(url),
-               urlfe.count_or(url),
-               urlfe.count_equal(url),
-               urlfe.count_underscore(url),
-               urlfe.count_tilde(url),
-               urlfe.count_percentage(url),
-               urlfe.count_slash(url),
-               urlfe.count_star(url),
-               urlfe.count_colon(url),
-               urlfe.count_comma(url),
-               urlfe.count_semicolumn(url),
-               urlfe.count_dollar(url),
-               urlfe.count_space(url),
-               
-               urlfe.check_www(words_raw),
-               urlfe.check_com(words_raw),
-               urlfe.count_double_slash(url),
                urlfe.count_http_token(path),
                urlfe.https_token(scheme),
                
@@ -430,7 +409,7 @@ def extract_features(url):
 
                
                # # # content-based features
-                 ctnfe.nb_hyperlinks(Href, Link, Media, Form, CSS, Favicon),
+                 ctnfe.nb_hyperlinks(domain),
                  ctnfe.internal_hyperlinks(Href, Link, Media, Form, CSS, Favicon),
                  ctnfe.external_hyperlinks(Href, Link, Media, Form, CSS, Favicon),
                  ctnfe.null_hyperlinks(hostname, Href, Link, Media, Form, CSS, Favicon),
@@ -476,27 +455,6 @@ def extract_Statistical_features(url, page, hostname, domain, path, words_raw, w
                urlfe.url_length(url),
                urlfe.url_length(hostname),
                #urlfe.having_ip_address(url),
-               urlfe.count_dots(url),
-               urlfe.count_hyphens(url),
-               urlfe.count_at(url),
-               urlfe.count_exclamation(url),
-               urlfe.count_and(url),
-               urlfe.count_or(url),
-               urlfe.count_equal(url),
-               urlfe.count_underscore(url),
-               urlfe.count_tilde(url),
-               urlfe.count_percentage(url),
-               urlfe.count_slash(url),
-               urlfe.count_star(url),
-               urlfe.count_colon(url),
-               urlfe.count_comma(url),
-               urlfe.count_semicolumn(url),
-               urlfe.count_dollar(url),
-               urlfe.count_space(url),
-               
-               urlfe.check_www(words_raw),
-               urlfe.check_com(words_raw),
-               urlfe.count_double_slash(url),
                urlfe.count_http_token(path),
                #urlfe.https_token(scheme),
                
@@ -568,7 +526,7 @@ def extract_hyperlinks_features(Href, Link, Media, Form, CSS, Favicon):
         row = [
                
                # # # content-based features
-                 ctnfe.nb_hyperlinks(Href, Link, Media, Form, CSS, Favicon),
+                 ctnfe.nb_hyperlinks(domain),
                  ctnfe.internal_hyperlinks(Href, Link, Media, Form, CSS, Favicon),
                  ctnfe.external_hyperlinks(Href, Link, Media, Form, CSS, Favicon),
                  ctnfe.null_hyperlinks(hostname, Href, Link, Media, Form, CSS, Favicon),
